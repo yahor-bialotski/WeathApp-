@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WhethApp?
+
+  Created by Егор Белоцкий on 24.08.22.
+  
+*/
+
+"today %@" = "Today, %@";
+"%@ windSpeed" = "%@ m/s";
+"%@ lang %@" = "%@ en %@";
