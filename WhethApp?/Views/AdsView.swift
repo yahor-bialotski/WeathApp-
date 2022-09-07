@@ -13,7 +13,6 @@ struct AdsView: View {
             Text("Your advertisment can be here!")
             Text("Call 937-99-92")
         }
-        
         .frame(maxWidth: .infinity, maxHeight: 120)
         .foregroundColor(.blue)
         .background(Color.white)

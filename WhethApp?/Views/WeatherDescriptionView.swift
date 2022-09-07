@@ -32,14 +32,13 @@ struct WeatherDescriptionView: View {
             VStack {
                 Image(systemName: "humidity")
                 if let humidity = humidity {
-                    Text("\(humidity)" + "%")
+                    Text("\(humidity) %")
                 }
             }
         }
-        .frame(maxWidth: .infinity)
+//        .frame(maxWidth: .infinity)
         .padding()
         .border(Color.white, width: 1)
-        
     }
 }
 

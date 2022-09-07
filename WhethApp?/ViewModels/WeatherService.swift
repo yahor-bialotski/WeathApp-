@@ -43,9 +43,11 @@ class WheatherSevice: ObservableObject {
     }
     
     func getNetworkWheatherData(latitude: Double, longtitude: Double) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitude)&lon=\(longtitude)&exclude=minutely&units=metric&appid=8ec3071b97671c6aeaaf91466c5b453f") else { return }
+        let langStr = Locale.current.languageCode
         
-        guard let getCityUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longtitude)&appid=8ec3071b97671c6aeaaf91466c5b453f") else { return }
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/onecall?lat=\(latitude)&lon=\(longtitude)&lang=\(langStr ?? "de")&exclude=minutely&units=metric&appid=8ec3071b97671c6aeaaf91466c5b453f") else { return }
+        
+        guard let getCityUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longtitude)&lang=\(langStr ?? "de")&appid=8ec3071b97671c6aeaaf91466c5b453f") else { return }
         
         let urlRequest = URLRequest(url: url)
         let getCityUrlRequest = URLRequest(url: getCityUrl)
@@ -57,7 +59,7 @@ class WheatherSevice: ObservableObject {
             let wheatherData = CurrentWheatherData(networkData: networkWheatherData)
             print(wheatherData)
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.wheather = wheatherData
             }
         }.resume()

@@ -17,7 +17,6 @@ struct DailyWheatherData {
         let dailyDate = Date(timeIntervalSince1970: Double(networkData.dt))
         let dayTimePeriodFormatter = DateFormatter()
         dayTimePeriodFormatter.dateFormat = "dd MMM"
-        dayTimePeriodFormatter.locale = Locale(identifier: "en_us")
         let dateString = dayTimePeriodFormatter.string(from: dailyDate)
         
         self.date = dateString

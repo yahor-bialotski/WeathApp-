@@ -16,7 +16,7 @@ struct CityAndTempView: View {
             VStack(alignment: .leading, spacing: 5) {
                 Text(city ?? "-")
                     .bold().font(.title)
-                Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute().locale(Locale(identifier: "en"))))")
+                Text("today \(Date().formatted(.dateTime.month().day().hour().minute().locale(Locale(identifier: "ru"))))")
                     .fontWeight(.light)
             }
             

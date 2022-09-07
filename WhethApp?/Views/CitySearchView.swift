@@ -18,7 +18,7 @@ struct CitySearchView: View {
                 .textFieldStyle(.roundedBorder)
                 .foregroundColor(.black)
             
-            Button(action: {viewModel.loadWeather(city: searchedCity)}, label: {
+            Button(action: { viewModel.loadWeather(city: searchedCity) }, label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 5)
                         .fill(Color.blue)

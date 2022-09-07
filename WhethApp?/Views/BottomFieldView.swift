@@ -21,9 +21,10 @@ struct BottomFieldView: View {
             } label: {
                 Image(systemName: "location.circle.fill")
             }
+            
             .frame(width: 60, height: 60)
             .background(Color.blue)
-            .cornerRadius(50)
+            .cornerRadius(30)
         }
     }
 }

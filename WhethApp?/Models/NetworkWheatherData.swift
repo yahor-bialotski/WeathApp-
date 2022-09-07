@@ -9,7 +9,7 @@ import Foundation
 
 struct Response: Decodable  {
     var timezone: String
-    var current: TempritureInfo
+    var current: TemperatureInfo
     var daily: [DailyWheather]
 }
 
@@ -17,7 +17,7 @@ struct City: Decodable {
     var name: String
 }
 
-struct TempritureInfo: Decodable {
+struct TemperatureInfo: Decodable {
     var currentDate: Int
     var temp: Double
     var humidity: Int

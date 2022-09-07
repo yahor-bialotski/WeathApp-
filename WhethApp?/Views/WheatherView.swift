@@ -13,26 +13,29 @@ struct WheatherView: View {
     var body: some View {
         VStack {
             CitySearchView()
-            CityAndTempView(city: wheatherService.cityName?.city,
-                            temperature: wheatherService.wheather?.currentTempriture)
-            .padding()
             
-            WeatherDescriptionView(windSpeed: wheatherService.wheather?.windSpeed, wheatherDescription: wheatherService.wheather?.wheatherDesciption, humidity: wheatherService.wheather?.humidity)
-            
-                .padding()
-            
-            DailyForecastView()
+            if wheatherService.wheather != nil {
+                CityAndTempView(city: wheatherService.cityName?.city,
+                                temperature: wheatherService.wheather?.currentTempriture)
+                
+                WeatherDescriptionView(windSpeed: wheatherService.wheather?.windSpeed,
+                                       wheatherDescription: wheatherService.wheather?.wheatherDesciption,
+                                       humidity: wheatherService.wheather?.humidity)
+                
+                DailyForecastView()
+            }
+            else {
+                Spacer()
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                    .accentColor(Color.white)
+            }
+            Spacer()
             AdsView()
             BottomFieldView()
         }
-        
-        .background(Color(hue: 0.607, saturation: 0.932, brightness: 0.501))
         .foregroundColor(.white)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        WheatherView()
+        .padding()
+        .background(Color(hue: 0.607, saturation: 0.932, brightness: 0.501))
     }
 }

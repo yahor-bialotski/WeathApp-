@@ -20,6 +20,7 @@
 		748DB83A289090F9008E7F93 /* CurrentWheatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB839289090F9008E7F93 /* CurrentWheatherData.swift */; };
 		748DB8402892A598008E7F93 /* GeolocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB83F2892A598008E7F93 /* GeolocationViewModel.swift */; };
 		748DB84A2897ECF6008E7F93 /* WheatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DB8492897ECF6008E7F93 /* WheatherView.swift */; };
+		7494DDBB28B6C2C800BE5075 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7494DDBD28B6C2C800BE5075 /* Localizable.strings */; };
 		74E8343A28992806004001D8 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8343928992806004001D8 /* DailyForecastView.swift */; };
 		74E8343E289AA6BB004001D8 /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8343D289AA6BB004001D8 /* CitySearchView.swift */; };
 		74E83440289AAA56004001D8 /* CityAndTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E8343F289AAA56004001D8 /* CityAndTempView.swift */; };
@@ -43,6 +44,8 @@
 		748DB83D28929CF2008E7F93 /* WhethApp--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WhethApp--Info.plist"; sourceTree = SOURCE_ROOT; };
 		748DB83F2892A598008E7F93 /* GeolocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewModel.swift; sourceTree = "<group>"; };
 		748DB8492897ECF6008E7F93 /* WheatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherView.swift; sourceTree = "<group>"; };
+		7494DDC228B6C3A300BE5075 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7494DDC328B6C40200BE5075 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		74E8343928992806004001D8 /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
 		74E8343D289AA6BB004001D8 /* CitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchView.swift; sourceTree = "<group>"; };
 		74E8343F289AAA56004001D8 /* CityAndTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAndTempView.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		748DB823288831DE008E7F93 /* WhethApp? */ = {
 			isa = PBXGroup;
 			children = (
+				7494DDB728B6B5C300BE5075 /* Resouces */,
 				748DB83D28929CF2008E7F93 /* WhethApp--Info.plist */,
 				748DB836288FDC88008E7F93 /* ViewModels */,
 				748DB833288F426C008E7F93 /* Models */,
@@ -143,6 +147,22 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		7494DDB728B6B5C300BE5075 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				7494DDB828B6B5E000BE5075 /* Localization */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		7494DDB828B6B5E000BE5075 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7494DDBD28B6C2C800BE5075 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +205,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 748DB818288831DE008E7F93;
 			productRefGroup = 748DB822288831DE008E7F93 /* Products */;
@@ -202,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				748DB82C288831E6008E7F93 /* Preview Assets.xcassets in Resources */,
+				7494DDBB28B6C2C800BE5075 /* Localizable.strings in Resources */,
 				748DB829288831E6008E7F93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +255,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7494DDBD28B6C2C800BE5075 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7494DDC228B6C3A300BE5075 /* en */,
+				7494DDC328B6C40200BE5075 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		748DB82D288831E6008E7F93 /* Debug */ = {
@@ -285,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
